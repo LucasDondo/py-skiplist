@@ -1,7 +1,7 @@
-skiplist-python
+Py-SkipList
 ===============
 
-Pure python implementation of a skiplist data structure.
+Pure Python implementation of a skip list data structure.
 
 [![Build Status](https://travis-ci.org/ZhukovAlexander/py-skiplist.svg?branch=master)](https://travis-ci.org/ZhukovAlexander/py-skiplist)
 [![Coverage Status](https://coveralls.io/repos/ZhukovAlexander/py-skiplist/badge.svg?branch=master&service=github)](https://coveralls.io/github/ZhukovAlexander/py-skiplist?branch=master)
@@ -47,7 +47,7 @@ True
 Skip List Structure
 --------------------
 Each element is represented by a node, the level of 
-which is chosen randoml when the node is inserted
+which is chosen randomly when the node is inserted
 without regard for the number of elements in the
 data structure. A `level i` node has `i` forward
 pointers, indexed 1 through `i`. There is no need
@@ -60,12 +60,12 @@ of a list has forward pointers at levels one through
 levels higher than the current maximum level of the
 list point to `NIL`.
 
-Skip List Algoritms
+Skip List Algorithms
 ===================
 Skip list operations are analogous to that of a binary
 tree. They include: **search**, **insert**,
 and **delete**. Note that skip lists are easily
-extendable to support operations like "find the minimum key" or "find the next key".
+extendable to support operations like _find the minimum key_ or _find the next key_.
 
 Initialization
 --------------
@@ -103,7 +103,7 @@ the search is complete, `update[i]` contains a pointer
 to the rightmost node of level `i`. The new node
 is of a random level.
 If the insertion generates a node with a greater level
-than the previous maximum, both *Maxlevel* 
+than the previous maximum, both `Maxlevel` 
 and the appropriate portions of the update vector
 are updated. After each deletion, we check if we have
 deleted the maximum element of the list and if so,
@@ -111,13 +111,12 @@ decrease the maximum level of the list.
 
 **References**
 
-* [*Skip list wikipedea article*](http://en.wikipedia.org/wiki/Skip_list),
-* [*A Skip List Cookbook*](http://cg.scs.carleton.ca/~morin/teaching/5408/refs/p90b.pdf) by William Pugh
+* [Skip list wikipedea article](http://en.wikipedia.org/wiki/Skip_list)
+* [A Skip List Cookbook](http://cg.scs.carleton.ca/~morin/teaching/5408/refs/p90b.pdf) by William Pugh
 * [Skip List vs. Binary Search Tree on Stack Overflow
 ](http://stackoverflow.com/questions/256511/skip-list-vs-binary-tree)
 * [A Provably Correct Scalable Concurrent Skip
-List Whitepaper](http://www.cs.tau.ac.il/~shanir/nir-pubs-web/Papers/OPODIS2006-BA.pdf)
+List Whitepaper](http://cs.tau.ac.il/~shanir/nir-pubs-web/Papers/OPODIS2006-BA.pdf)
 * [Purely functional concurrent skip list
- on Stack Overflow](http://stackoverflow.com/questions/3489560/purely-functional-concurrent-skip-list)
+ on Stack Overflow](https://stackoverflow.com/questions/3489560/purely-functional-concurrent-skip-list)
 * [http://eternallyconfuzzled.com/tuts/datastructures/jsw_tut_skip.aspx](http://eternallyconfuzzled.com/tuts/datastructures/jsw_tut_skip.aspx)
-
